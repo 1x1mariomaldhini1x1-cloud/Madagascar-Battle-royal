@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="mg">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Madagascar Battle Royale Offline</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+</head>
+<body>
+
+    <!-- Intro Screen -->
+    <div id="intro-screen">
+        <h1 class="intro-title">KENNY ENTERTAINMENT</h1>
+        <p class="intro-sub">Presents</p>
+    </div>
+
+    <!-- Menu -->
+    <div id="ui-menu" style="display:none;">
+        <h1>BATTLE ROYALE MADAGASCAR</h1>
+        <p>Fidio ny ambaratonga:</p>
+        <button onclick="startGame('facile')">FACILE</button>
+        <button onclick="startGame('moyen')">MOYEN</button>
+        <button onclick="startGame('difficile')">DIFFICILE</button>
+    </div>
+
+    <!-- Game Interface -->
+    <div id="game-ui" style="display:none;">
+        <div id="crosshair">+</div>
+        <div id="stats">
+            HP: <span id="hp">100</span> | Deba: <span id="enemies">5</span><br>
+            Basy: <b id="current-gun">MP40</b>
+        </div>
+        
+        <!-- Bokotra fanovana Basy -->
+        <div id="weapon-select">
+            <button onclick="switchGun('MP40')">MP40</button>
+            <button onclick="switchGun('UMP')">UMP</button>
+            <button onclick="switchGun('M1887')">M1887</button>
+            <button onclick="switchGun('SKS')">SKS</button>
+            <button onclick="switchGun('WOODPECKER')">WOODPECKER</button>
+        </div>
+    </div>
+
+    <script src="game.js"></script>
+</body>
+</html>

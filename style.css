@@ -1,0 +1,118 @@
+body {
+    margin: 0;
+    overflow: hidden;
+    font-family: 'Arial', sans-serif;
+    background-color: #000;
+}
+
+/* Intro Screen */
+#intro-screen {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 20;
+    animation: fadeOut 4s forwards;
+}
+
+.intro-title {
+    color: #f1c40f;
+    font-size: 2.5rem;
+    font-weight: bold;
+    letter-spacing: 3px;
+    margin: 0;
+    text-shadow: 0 0 10px rgba(241, 196, 15, 0.7);
+    text-align: center;
+}
+
+.intro-sub {
+    color: #fff;
+    font-size: 1.2rem;
+    letter-spacing: 2px;
+}
+
+@keyframes fadeOut {
+    0% { opacity: 1; }
+    70% { opacity: 1; }
+    100% { opacity: 0; visibility: hidden; }
+}
+
+/* Menu UI */
+#ui-menu {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    z-index: 10;
+}
+
+button {
+    padding: 12px 20px;
+    margin: 6px;
+    font-size: 15px;
+    font-weight: bold;
+    background: #e74c3c;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#game-ui {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+#crosshair {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: red;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+#stats {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    color: white;
+    font-size: 16px;
+    background: rgba(0,0,0,0.6);
+    padding: 10px 15px;
+    border-radius: 5px;
+}
+
+#weapon-select {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    pointer-events: auto;
+    display: flex;
+    gap: 5px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#weapon-select button {
+    padding: 8px 12px;
+    font-size: 12px;
+    background: rgba(0, 0, 0, 0.8);
+    border: 1px solid #f1c40f;
+    color: #fff;
+    border-radius: 4px;
+}
